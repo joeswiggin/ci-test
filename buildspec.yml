@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm i
+      - env
+  build:
+    commands:
+      - npm run test
+  post_build:
+    commands:
+      # -
+artifacts:
+  discard-paths: no
+  files:
+    - "**/*"
