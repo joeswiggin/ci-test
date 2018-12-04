@@ -3,14 +3,10 @@ phases:
   install:
     commands:
       - npm i
-      - env
+      - export IS_RELEASE=$(git describe --always --tags git@github.com:jwiggins78/ci-test.git | grep -c $CODEBUILD_RESOLVED_SOURCE_VERSION)
+      - echo Commit is release commit: $IS_RELEASE
   build:
     commands:
       - npm run test
-  post_build:
-    commands:
-      # -
-artifacts:
-  discard-paths: no
-  files:
-    - "**/*"
+      - "[ $IS_RELEASE = 0 ] && echo 'Need to release and exit' && exit 1"
+      
