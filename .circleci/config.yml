@@ -5,9 +5,8 @@ jobs:
       - image: circleci/node:8.14-browsers
     working_directory: ~/repo
     branches:
-      branches:
-        only: 
-          - master
+      only: 
+        - master
     steps:
       - run: echo $CIRCLE_USERNAME caused this run
       - checkout
@@ -22,3 +21,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
+
