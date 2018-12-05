@@ -22,9 +22,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
       - run: 
-        command: |
-          CURRENT_MAJOR_MINOR=`cat package.json | jq -r ".version" | cut -d '.' -f 1,2`
-          NEW_MAJOR_MINOR=`date +%y.%-m`
-          if [ $CURRENT_MAJOR_MINOR = NEW_MAJOR_MINOR ]; then npm version patch; else npm version $NEW_MAJOR_MINOR.0; fi
-          cat package.json
+          command: |
+            CURRENT_MAJOR_MINOR=`cat package.json | jq -r ".version" | cut -d '.' -f 1,2`
+            NEW_MAJOR_MINOR=`date +%y.%-m`
+            if [ $CURRENT_MAJOR_MINOR == NEW_MAJOR_MINOR ]; then npm version patch; else npm version $NEW_MAJOR_MINOR.0; fi
+            cat package.json
 
