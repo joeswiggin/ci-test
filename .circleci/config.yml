@@ -32,5 +32,5 @@ jobs:
             NEW_VERSION=`cat package.json | jq -r ".version"`
             git add package.json
             git commit -m "release $APP_NAME v$NEW_VERSION [skip ci]"
-            git log
+            git push
 
