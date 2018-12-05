@@ -31,5 +31,5 @@ jobs:
             NEW_MAJOR_MINOR=`date +%y.%-m`
             if [ $CURRENT_MAJOR_MINOR == NEW_MAJOR_MINOR ]; then VERSION=patch; else VERSION=$NEW_MAJOR_MINOR.0; fi
             npm version $VERSION -m "Release $APP_NAME v%s [skip ci]"
-            git push
+            git push -q https://${PERSONAL_GITHUB_TOKEN}@github.com/jwiggins78/ci-test.git master
 
