@@ -25,8 +25,12 @@ jobs:
           command: |
             git config --global user.email "KualiCoSaaSOps@kuali.co"
             git config --global user.name "KualiCoSaaSOps"
+            APP_NAME=`cat package.json | jq -r ".name"
             CURRENT_MAJOR_MINOR=`cat package.json | jq -r ".version" | cut -d '.' -f 1,2`
             NEW_MAJOR_MINOR=`date +%y.%-m`
             if [ $CURRENT_MAJOR_MINOR == NEW_MAJOR_MINOR ]; then npm version patch; else npm version $NEW_MAJOR_MINOR.0; fi
-            cat package.json
+            NEW_VERSION=`cat package.json | jq -r ".version"
+            git add package.json
+            git commit -m "release $APP_NAME v$NEW_VERSION [skip ci]"
+            git log
 
