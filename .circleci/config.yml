@@ -16,7 +16,7 @@ jobs:
           paths:
             - node_modules
           key: v2-dependency-cache-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
-      - run: npm test
+      - run: npm run test
       - run: 
           name: Version application
           command: |
