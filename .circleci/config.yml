@@ -16,7 +16,7 @@ jobs:
           paths:
             - node_modules
           key: v2-dependency-cache-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
-      - run: npm run test
+      - run: npm test
       - run: 
           name: Version application
           command: |
@@ -26,7 +26,6 @@ jobs:
             CURRENT_MAJOR_MINOR=`cat package.json | jq -r ".version" | cut -d '.' -f 1,2`
             NEW_MAJOR_MINOR=`date +%y.%-m`
             if [ $CURRENT_MAJOR_MINOR == $NEW_MAJOR_MINOR ]; then VERSION=patch; else VERSION=$NEW_MAJOR_MINOR.0; fi
-            git diff
             npm version $VERSION -m "Release $APP_NAME v%s [skip ci]"
             git push -q https://${PERSONAL_GITHUB_TOKEN}@github.com/jwiggins78/ci-test.git master
             git push -q https://${PERSONAL_GITHUB_TOKEN}@github.com/jwiggins78/ci-test.git --tags

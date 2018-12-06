@@ -18,6 +18,6 @@
   "homepage": "https://github.com/jwiggins78/ci-test#readme",
   "devDependencies": {
     "jest": "23.6.0",
-    "jira-changelog": "^1.3.2"
+    "jira-changelog": "1.3.2"
   }
 }
