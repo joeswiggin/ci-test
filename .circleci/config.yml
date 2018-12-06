@@ -13,6 +13,7 @@ jobs:
           key: v2-dependency-cache-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
       - run: npm install --no-shrinkwrap
       - run: git --no-pager diff
+      - run: npm --version
       - save_cache:
           paths:
             - node_modules
