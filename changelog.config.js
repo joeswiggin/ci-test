@@ -105,7 +105,7 @@ module.exports = {
   // Learn more: http://ejs.co/
   template:
 `<% commits.forEach(release => { %>
-##<%= release.version %>
+## <%= release.version %>
   <% release.commits.forEach(commit => { %>
   * <%= commit.summary %>
     * <%= commit.authorName %> on <%= commit.date %> [View Commit](../../commit/<%= commit.revision %>)
