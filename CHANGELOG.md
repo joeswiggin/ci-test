@@ -1,53 +1,26 @@
 
 ## CURRENT
   
+  * Filtering out release commits (HEAD, origin/master, origin/HEAD, master)
+    * Joe Wiggins on 2018-12-07 11:27:18 -0700 [View Commit](../../commit/64719eec0ff4950b1438cd125bc51958c72514df)
+  
   * Missing white space
     * Joe Wiggins on 2018-12-07 11:21:13 -0700 [View Commit](../../commit/45ab2919941da86993133897dcc0cbcd5ed6edd8)
-    
-
-## v18.12.7
-  
-  * Release ci-test v18.12.7  (tag: v18.12.7)
-    * KualiCoSaaSOps on 2018-12-07 18:20:02 +0000 [View Commit](../../commit/8e9f3159d69a4235be0ac2cbd4ef122d7f7abd86)
   
   * Adding changelog generation to version command
     * Joe Wiggins on 2018-12-07 11:19:32 -0700 [View Commit](../../commit/7f6c2a477c10271bd159ab7af535e52db6f7f926)
   
   * 18.12.6
     * Joe Wiggins on 2018-12-07 11:13:25 -0700 [View Commit](../../commit/9743d93e64e719ca0f3ad5daddec60b34338b009)
-    
-
-## v18.12.6
-  
-  * Release ci-test v18.12.6  (tag: v18.12.6)
-    * KualiCoSaaSOps on 2018-12-06 20:55:47 +0000 [View Commit](../../commit/2fb728320b2cfb6093f18dc2f075c4912e2314c4)
   
   * Reverting to version running in production
     * Joe Wiggins on 2018-12-06 13:55:23 -0700 [View Commit](../../commit/2e7eedaf4d7d53d592908986699f9dc399c7ea78)
-    
-
-## v18.12.5
-  
-  * Release ci-test v18.12.5  (tag: v18.12.5)
-    * KualiCoSaaSOps on 2018-12-06 18:30:37 +0000 [View Commit](../../commit/0262e067badeff5b98646df07b19b811f8ff2ce0)
   
   * Revert back to package lock, but make ci no alter it
     * Joe Wiggins on 2018-12-06 11:29:56 -0700 [View Commit](../../commit/298ec291952da98c9a4c6ce846304fdc29540c64)
-    
-
-## v18.12.4
-  
-  * Release ci-test v18.12.4  (tag: v18.12.4)
-    * KualiCoSaaSOps on 2018-12-06 18:21:45 +0000 [View Commit](../../commit/1853f7dabe979126094062f7ebbee8954ec56447)
   
   * showing npm versin
     * Joe Wiggins on 2018-12-06 11:21:01 -0700 [View Commit](../../commit/4766170d1861669a11fca4d1919592a2a2afe417)
-    
-
-## v18.12.3
-  
-  * Release ci-test v18.12.3  (tag: v18.12.3)
-    * KualiCoSaaSOps on 2018-12-06 18:15:54 +0000 [View Commit](../../commit/eb1f640b0761e0b9bdf789b49469a828d1aaa0e3)
   
   * requesting that npm not alter the shrinkwrap file
     * Joe Wiggins on 2018-12-06 11:15:29 -0700 [View Commit](../../commit/82659632c53be2b6131029e029c8bbea9ba01a1c)
@@ -78,27 +51,15 @@
   
   * Testing changes
     * Joe Wiggins on 2018-12-06 10:27:42 -0700 [View Commit](../../commit/2da0864251640f2b29bdd409687273b115a73cdd)
-    
-
-## v18.12.2
-  
-  * Release ci-test v18.12.2  (tag: v18.12.2)
-    * KualiCoSaaSOps on 2018-12-05 23:48:14 +0000 [View Commit](../../commit/b787827cc273f8d2c243a2be3d4b46f903556fd5)
   
   * push tags, too
     * Joe Wiggins on 2018-12-05 16:47:50 -0700 [View Commit](../../commit/9d82d42297b1aabda2b48c2177853be1bd4e7ae1)
-  
-  * Release ci-test v18.12.1 
-    * KualiCoSaaSOps on 2018-12-05 23:33:16 +0000 [View Commit](../../commit/d9cb40482e5ebe10072541d60066def33d28a91e)
   
   * fixing patch
     * Joe Wiggins on 2018-12-05 16:32:56 -0700 [View Commit](../../commit/222a5791961a1e0fe5849b8efe6d3be8c9aac2a5)
   
   * causing patch
     * Joe Wiggins on 2018-12-05 16:29:58 -0700 [View Commit](../../commit/46426f35d763c5846a6f312d2b59e83479080529)
-  
-  * Release ci-test v18.12.0 
-    * KualiCoSaaSOps on 2018-12-05 23:28:54 +0000 [View Commit](../../commit/5fa03bec3e3f13c868bff055c6c12becd43a937d)
   
   * add private token on push
     * Joe Wiggins on 2018-12-05 16:28:34 -0700 [View Commit](../../commit/cd7db3a7dac6ff74b98d81e4169c1096ee26764a)
