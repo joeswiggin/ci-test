@@ -1,6 +1,6 @@
 {
   "name": "ci-test",
-  "version": "18.12.6",
+  "version": "18.12.7",
   "description": "Testing app versioning automation",
   "main": "index.js",
   "scripts": {
