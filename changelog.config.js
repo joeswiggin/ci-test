@@ -76,20 +76,21 @@ module.exports = {
 
   // Transform from commits by ticket to commits by release per the (tag: vx.y.z) in summary
   transformData: function(data) {
-    const commits = data.commits.all.reduce((accumulator, commit) => {
-      const version = commit.summary.match(/\(tag: (v\d{2}\.\d{1,2}.\d{1,3})\)/);
-      commit.summary = commit.summary.replace(/ \(tag:[^)]+\)|\[skip ci\]/, '');
-      if (version || !accumulator.length) {
-        accumulator.push({
-          version: version && version[1] || 'CURRENT',
-          commits: [commit]
-        });
-      } else {
-        accumulator[accumulator.length-1].commits.push(commit);
-      }
-      
-      return accumulator;
-    }, []);
+    const commits = data.commits.all
+      .filter(commit => !commit.summary.match(/\(maven-release-plugin\|res-deploy\|#norelease\)|\[skip ci\]/))
+      .reduce((accumulator, commit) => {
+        const version = commit.summary.match(/\(tag: (v\d{2}\.\d{1,2}.\d{1,3})\)/);
+        if (version || !accumulator.length) {
+          accumulator.push({
+            version: version && version[1] || 'CURRENT',
+            commits: [commit]
+          });
+        } else {
+          accumulator[accumulator.length-1].commits.push(commit);
+        }
+        
+        return accumulator;
+      }, []);
 
     return Promise.resolve({commits});
   },
